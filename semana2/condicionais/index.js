@@ -127,7 +127,8 @@ switch (turnoDeEstudo) {
 const tipoDeFilme = prompt("Qual o tipo de filme ?")
 const precoDoIngresso = Number (prompt ("Qual o preço do ingresso?"))
 
-if (tipoDeFilme === "fantasia") {
-    console.log
-
+if (tipoDeFilme === "fantasia" && precoDoIngresso < 15) {
+    console.log ("Bom filme!")
+} else {
+    console.log ("Escolha outro filme")
 }
