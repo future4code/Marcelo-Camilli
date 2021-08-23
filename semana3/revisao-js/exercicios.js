@@ -105,7 +105,7 @@ function retornaSegundoMaiorESegundoMenor(array) {
 }
 // EXERCÍCIO 11
 function retornaChamadaDeFilme(filme) {
-   
+
    const filme1 = {
       nome: "O Diabo Veste Prada",
       ano: 2006,
@@ -123,8 +123,13 @@ const atoresDoFilme = filme1.atores
 
 // EXERCÍCIO 12
 function retornaPessoaAnonimizada(pessoa) {
-   
+      const novaPessoa = { 
+        ...pessoa,
+        nome: "ANÔNIMO"
+    }
+   return novaPessoa
 }
+
 
 // EXERCÍCIO 13A
 function retornaPessoasAutorizadas(pessoas) {
