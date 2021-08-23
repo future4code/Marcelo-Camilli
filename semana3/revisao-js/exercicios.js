@@ -4,24 +4,25 @@
 
 
 // EXERCÍCIO 01
-function retornaTamanhoArray(array1) {
-   const lista = array1.length
-   return lista
+function retornaTamanhoArray(array) {
+   return array.length
 }
-retornaTamanhoArray ()
 
 // EXERCÍCIO 02
-function retornaArrayInvertido(array2) {
-   const array2Invertido = array2.reverse()
-return array2Invertido
-}
-retornaArrayInvertido ()
+function retornaArrayInvertido(array) {
+   const array2Invertido = array.reverse()
+   return array2Invertido
+ }
 
 // EXERCÍCIO 03
 function retornaArrayOrdenado(array) {
-  
+   const arrayOrdenado = array.sort(function (a,b){
+      if (a> b) return 1
+      if (a <b) return -1
+      return 0
+  })
+ return arrayOrdenado
 }
-
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
   
