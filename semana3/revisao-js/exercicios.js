@@ -25,9 +25,14 @@ function retornaArrayOrdenado(array) {
 }
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
-  
+   let par = []
+    for (let i =0; i <array.length; i++) {
+        if (array[i] % 2 === 0){
+            par.push(array[i])
+        }
+    } 
+    return par
 }
-
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
  
