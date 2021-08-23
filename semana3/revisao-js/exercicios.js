@@ -78,7 +78,7 @@ function retornaNPrimeirosPares(n) {
 
 // EXERCÍCIO 09
 function classificaTriangulo(ladoA, ladoB, ladoC) {
-   
+
    if (ladoA === ladoB && ladoB === ladoC){
       return "Equilátero"
   } else if (ladoA !== ladoB && ladoB !== ladoC && ladoC !== ladoA){
@@ -91,9 +91,18 @@ function classificaTriangulo(ladoA, ladoB, ladoC) {
 
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
-  
-}
+  function retornaSegundoMaiorESegundoMenor(array) {
 
+   const arrayOrdenado = retornaArrayOrdenado(array)
+   const indiceSegundoMenor = 1
+   const indiceSegundoMaior = array.length - 2
+
+   return [
+      arrayOrdenado[indiceSegundoMaior],
+      arrayOrdenado[indiceSegundoMenor]
+   ]
+}
+}
 // EXERCÍCIO 11
 function retornaChamadaDeFilme(filme) {
    
