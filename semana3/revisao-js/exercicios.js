@@ -54,13 +54,27 @@ function retornaMaiorNumero(array) {
 
 // EXERCÍCIO 07
 function retornaObjetoEntreDoisNumeros(num1, num2) {
-
+   const [menor, maior] = retornaArrayOrdenado([num1, num2])  
+   return  { 
+   maiorNumero: maior,
+   maiorDivisivelPorMenor: maior % menor === 0,
+   diferenca: maior - menor
 }
+ 
+}
+
 
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
-   
+   const resultado = []
+     
+   for (let i = 0; i < n; i++) {
+      resultado[i] = 2 * i
+   }
+
+   return resultado
 }
+
 
 // EXERCÍCIO 09
 function classificaTriangulo(ladoA, ladoB, ladoC) {
