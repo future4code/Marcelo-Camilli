@@ -1,3 +1,14 @@
+header {
+    width: 100%;
+    background-color: rgba(190, 207, 190, 0.452);
+}
+
+footer {
+    width: 100%;
+    background-color: rgba(190, 207, 190, 0.452);
+    text-align: center;
+}
+
 body {
     background-image: url(https://lh3.googleusercontent.com/proxy/uyxvoWfl4ysUfSUEZWMQJcQXElW5b65lp0WYdtTEW8laDc-jTmIMh-cUvyJnIF2cxinymfZnjj-LBEBNaquNLMaWyP0QjGGSUJZ2tRmkhsn2BUnnu3PyqTvyyNYB_gCcQ-H33weoi4s41jeakXlTtwzPp3NRdFjLuoqnzuA_D2ztdsO2mWu_QTpeSh5KGN6Azy_B);
     background-repeat: no-repeat;
@@ -12,7 +23,7 @@ body {
     font-family:cursive;
     color: rgb(2, 77, 18);
     text-align: center;
-    background-color: rgb(179, 130, 24);
+    background-color: rgb(185, 172, 142);
     font-size: xx-large;
 }
 
@@ -25,12 +36,13 @@ body {
 
 .fonte3 {
     font-family: cursive;
-    color: rgb(5, 82, 22);
+    color: rgb(2, 54, 22);
     
 }
 
 .fonte-link {
     font-family:cursive;
+    font-size: xx-large;
     color: rgb(5, 82, 22);
     text-align: center;
 }
