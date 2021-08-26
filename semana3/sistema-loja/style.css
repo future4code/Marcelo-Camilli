@@ -1,0 +1,88 @@
+header {
+    width: 100%;
+    background-color: rgba(190, 207, 190, 0.452);
+}
+
+footer {
+    width: 100%;
+    background-color: rgba(190, 207, 190, 0.452);
+    text-align: center;
+}
+
+body {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKyQjRVX4Z0J1XV95H_RwaLFuOo1VP4FEwjg&usqp=CAU);
+    background-repeat: no-repeat;
+    background-position:right;
+    background-size: 250px;
+    height: auto;
+    }
+
+
+
+.fonte1 {
+    font-family:cursive;
+    color: rgb(2, 77, 18);
+    text-align: center;
+    background-color: rgb(167, 161, 150);
+    font-size: xx-large;
+}
+
+.fonte2 {
+    font-family: cursive;
+    font-size: xx-large;
+    color: rgb(26, 104, 43);
+    text-align: center;
+}
+
+.fonte3 {
+    font-family: cursive;
+    color: rgb(2, 54, 22);
+    
+}
+
+.fonte-link {
+    font-family:cursive;
+    font-size: xx-large;
+    color: rgb(5, 82, 22);
+    text-align: center;
+}
+
+.fundoverde {
+    background-color: lawngreen;
+}
+
+.img-inicial {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.img-produto {
+    border: 1px ;
+    border-radius: 2px;
+    padding: 2px;
+    width: 150px;
+}
+
+.img-redes-sociais {
+    width: 50px;
+    }
+
+.descricao-tabela {
+    background-color: rgb(24, 23, 23);
+    font-size: larger;
+    color: seashell;
+    text-align: center;
+}
+
+.linha-tabela {
+    background-color: rgb(72, 77, 73);
+    color: seashell;
+    text-align: center;
+}
+
+.tabela {
+    margin-left: auto;
+    margin-right: auto
+}
+
