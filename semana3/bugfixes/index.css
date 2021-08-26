@@ -21,7 +21,7 @@ input {
     width: 500px;
 }
 
-button:focus {
+button:active {
     color: white;
 }
 
@@ -39,15 +39,15 @@ div img {
 
 .botao-amarelo {
     background-color: #ffaf43;
-    width: 250px;
-    height: 40px;
+    width: 150px;
+    height: 30px;
     border-radius: 5px;
     font-size: 20px;
-    color: white;
+    color: black;
 }
 
 .botao-amarelo:hover {
-    background-color: #c44f00;
+    background-color: #c44f00;    
 }
 
 .container {
