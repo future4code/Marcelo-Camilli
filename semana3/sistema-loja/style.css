@@ -10,7 +10,7 @@ footer {
 }
 
 body {
-    background-image: url(https://lh3.googleusercontent.com/proxy/uyxvoWfl4ysUfSUEZWMQJcQXElW5b65lp0WYdtTEW8laDc-jTmIMh-cUvyJnIF2cxinymfZnjj-LBEBNaquNLMaWyP0QjGGSUJZ2tRmkhsn2BUnnu3PyqTvyyNYB_gCcQ-H33weoi4s41jeakXlTtwzPp3NRdFjLuoqnzuA_D2ztdsO2mWu_QTpeSh5KGN6Azy_B);
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKyQjRVX4Z0J1XV95H_RwaLFuOo1VP4FEwjg&usqp=CAU);
     background-repeat: no-repeat;
     background-position:right;
     background-size: 250px;
@@ -23,7 +23,7 @@ body {
     font-family:cursive;
     color: rgb(2, 77, 18);
     text-align: center;
-    background-color: rgb(185, 172, 142);
+    background-color: rgb(167, 161, 150);
     font-size: xx-large;
 }
 
@@ -85,3 +85,4 @@ body {
     margin-left: auto;
     margin-right: auto
 }
+
