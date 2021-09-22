@@ -2,9 +2,24 @@ import React from "react";
 import axios from "axios"
 import styled from "styled-components"
 
+const RegisterCard = styled.div`
+display: flex;
+flex-direction: column;
+border: 1px solid black;
+margin: 0 auto;
+width: 30%;
+margin-top: 10%;
+`
+
+const Titulo = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+`
+
 const SaveButton = styled.div`
 margin: 0 auto;
-background-color: cadetblue;
+
 `
 
 const headers = {
@@ -37,12 +52,13 @@ export default class Register extends React.Component {
 
     axios.post(url,body,headers) 
     .then ((res)=> {
-        console.log("Nome add")
+        alert ("usuário cadastrado")
+        this.setState({nome: "", email:""})
         this.setState({userListName: ""})
         this.setState({userlistEmail: ""})
     })
     .catch((err)=> {
-        console.log(err.response)
+        alert(err.response.data.message)
     })
 
     
@@ -51,19 +67,21 @@ export default class Register extends React.Component {
 }
 render () {
 return (
-    <><div>
-        <label> Nome:</label>
+    <><Titulo>
+        <h1>Labenusers</h1>
+        <h3>Cadastro de Usuários</h3>
+    </Titulo><>
+    <RegisterCard>
         <input
+            placeholder="Nome"
             value={this.state.userListName}
             onChange={this.handleUserlistName} />
-        <label> Email:</label>
         <input
+            placeholder="E-mail"
             value={this.state.userListEmail}
             onChange={this.handleUserlistEmail} />
-    </div>
-    <SaveButton>
-            <button onClick={this.createUser}>Salvar</button>
-        </SaveButton></>
+        <button onClick={this.createUser}>Salvar</button>
+    </RegisterCard></></>
 
 );
 }

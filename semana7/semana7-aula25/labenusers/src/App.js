@@ -3,36 +3,55 @@ import Register from "./Componentes/Register";
 import Usuarios from "./Componentes/Usuarios";
 import styled from "styled-components"
 
-const RegisterCard = styled.div`
-display: flex;
-flex-direction: column;
-border: 1px solid black;
-margin: 0 auto;
-width: 30%;
-margin-top: 10%;
+const ContainerGeral = styled.body`
+background-color: cadetblue;
+width: 100vw;
+height: 100vw;
 `
 
-const UserList= styled.div`
+const BotaoLista = styled.div `
+margin: 0 auto;
 display: flex;
 flex-direction: column;
-margin: 0 auto;
-width: 30%;
-margin-top: 10%;
-align-items: center;
+width: 250px;
+margin-top: 50px;
 `
-
-
-
 
 
 export default class App extends React.Component {
+  state = {
+    telaAtual: "register"
+  }
+
+  escolheTela = () => {
+    switch (this.state.telaAtual) {
+      case "register":
+        return <Register irParaCadastro={this.irParaCadastro}/>
+      case "usuarios":
+        return <Usuarios irParaUsuarios={this.irParaUsuarios}/>
+      default:
+        return <div>Pagina inexistente</div>
+    }
+  }
+
+  irParaCadastro = () => {
+    this.setState ({telaAtual:"register"})
+  }
+
+  irParaUsuarios = () => {
+    this.setState ({telaAtual:"usuarios"})
+  }
+
 render () {
   return (
-    <><RegisterCard>
-      <Register />
-    </RegisterCard>
-    <UserList>
-      <Usuarios />
-    </UserList></>
+    <ContainerGeral>
+    <><div>
+      {this.escolheTela()}
+    </div>
+    <BotaoLista>
+        <button onClick={this.irParaUsuarios}>Lista de usuarios cadastrados</button>
+        <button onClick={this.irParaCadastro}>Cadastro</button>
+      </BotaoLista></>
+      </ContainerGeral>
 )}
 }

@@ -2,6 +2,19 @@ import React from "react";
 import axios from "axios"
 import styled from "styled-components"
 
+const CardUsuario = styled.div`
+    border: 1px solid black;
+    padding: 10px;
+    margin:10px;
+    width: 300px;
+    justify-content: space-between;
+    display: flex;    
+`
+const ContainerUsuarios = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+`
 
 
 const headers = {
@@ -32,15 +45,30 @@ export default class Usuarios extends React.Component {
         })
     }
 
+    deleteUser = (id) => {
+        const url = `https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${id}`
+        axios.delete(url,headers)
+    
+    .then ((res)=> {
+        alert ("Usuário deletado")
+        this.getAllUsers()
+    })
+    .catch ((err)=> {
+        alert ("Ocorreu um erro, tente novamente")
+    })
+
+}
+
 render () {
     const userComponentes = this.state.userList.map((user)=> {
-        return <li>{user.name}</li>
+        return <CardUsuario key={user.id}>{user.name}
+                <button onClick={() => this.deleteUser(user.id)}>X</button></CardUsuario>
     })
 return (
-    <div>
+    <ContainerUsuarios>
+        <h3> Lista de Usuários Cadastrados </h3>
         {userComponentes}
-        <button>Voltar</button>
-        </div>
+    </ContainerUsuarios>
 );
 }
 }
