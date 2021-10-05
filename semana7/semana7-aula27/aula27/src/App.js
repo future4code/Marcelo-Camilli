@@ -12,6 +12,7 @@ const CardCharacter = styled.div `
   align-items: center;
   background-image: linear-gradient(to right, green,green);
 `
+
 const Container = styled.div `
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
