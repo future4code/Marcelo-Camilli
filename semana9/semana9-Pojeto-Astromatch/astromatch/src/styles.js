@@ -16,11 +16,12 @@ width: 40vh;
 height: 70vh;
 margin-left: auto;
 margin-right: auto;
-margin-top: 20vh;
-margin-bottom: 20vh;
+margin-top: 10vh;
+margin-bottom: 10vh;
 border: 1px solid black;
 border-radius: 25px;
 background-color: white;
+position: absolute;
 img {
     width: 200px;
     height: 250px;    
@@ -32,9 +33,43 @@ img {
 export const Buttons = styled.div ` 
 display: flex;
 button {    
-    padding: 10px;
+    padding: 20px;
     margin: 30px;
     border-radius: 5px;
     background-color: cadetblue;
+}
+`
+export const Main = styled.div ` 
+background-color: cadetblue;
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+`
+
+export const MainButtons = styled.button ` 
+    display: flex;
+    position: relative;
+    margin-top: 40em;
+    margin-left: 5em;    
+    border-radius: 5px;  
+`
+
+export const ItemContainer = styled.div ` 
+display: flex;
+border: 1px solid black;
+padding: 10px;
+margin: 10px;
+width: 200px;
+height: 50px;
+justify-content: space-between;
+align-items: center;
+
+
+img {
+    width: 60px ;
+    height: 60px;
+    border-radius: 30px;
+    margin-right: 20px;
 }
 `
