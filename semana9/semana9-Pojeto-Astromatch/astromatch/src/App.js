@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, {useState} from "react";
 import Home from "./HomePage/HomePage";
 import Match from "./Matches/Matches";
@@ -16,14 +17,29 @@ const App = () => {
     }
   }
 
+  const cleanMatches = () => {
+    axios
+    .put("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/marcelo-camilli-maryam/clear")
+  .then ((res) => {
+    console.log (res)
+    
+  })
+  .catch((err)=> {
+    console.log(err)
+  })
+  
+
+}
+
   return (
-    <Main>     
+    <Main>             
         {currentPage === "home" ? <Home/> : <Match/>}  
         <MainButtons>  
         <button onClick ={changeCurrentPage}>Change Page</button>
-        <button> Clear</button>
+        <button onClick ={cleanMatches}> Clear</button>
         </MainButtons>
     </Main>
+
         )
 }
 

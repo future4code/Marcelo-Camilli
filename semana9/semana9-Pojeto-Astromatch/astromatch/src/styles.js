@@ -22,6 +22,7 @@ border: 1px solid black;
 border-radius: 25px;
 background-color: white;
 position: absolute;
+text-align: center;
 img {
     width: 200px;
     height: 250px;    
@@ -50,8 +51,8 @@ position: relative;
 export const MainButtons = styled.button ` 
     display: flex;
     position: relative;
-    margin-top: 40em;
-    margin-left: 5em;    
+    margin-top: 46em;
+    margin-left: 8em;    
     border-radius: 5px;  
 `
 
@@ -64,7 +65,6 @@ width: 200px;
 height: 50px;
 justify-content: space-between;
 align-items: center;
-
 
 img {
     width: 60px ;

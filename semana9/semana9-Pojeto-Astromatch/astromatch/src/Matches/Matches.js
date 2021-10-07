@@ -4,7 +4,7 @@ import { MainContainer, CardContainer, ItemContainer} from "../styles"
 
 
 
-const Match = () => {
+export const Match = () => {
     const [matches, setMatches] = useState([])
 
     const getMatches = () => {

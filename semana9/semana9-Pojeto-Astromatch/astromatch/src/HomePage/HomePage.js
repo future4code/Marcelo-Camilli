@@ -33,7 +33,6 @@ const Home = () => {
             choice: true
         })
         .then ((res)=> {
-            console.log(res.data)
             getProfileToChoose()
             
         })
@@ -56,9 +55,9 @@ const Home = () => {
                     <button onClick={() => choosePerson (false)}>X</button>
                     <button onClick={() => choosePerson (true)}>V</button>
                 </Buttons>
-            </CardContainer>
+            </CardContainer>    
         </MainContainer>
-
+    
     );
 }
 
