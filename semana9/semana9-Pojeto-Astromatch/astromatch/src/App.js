@@ -17,26 +17,13 @@ const App = () => {
     }
   }
 
-  const cleanMatches = () => {
-    axios
-    .put("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/marcelo-camilli-maryam/clear")
-  .then ((res) => {
-    console.log (res)
-    
-  })
-  .catch((err)=> {
-    console.log(err)
-  })
-  
 
-}
 
   return (
     <Main>             
         {currentPage === "home" ? <Home/> : <Match/>}  
         <MainButtons>  
-        <button onClick ={changeCurrentPage}>Change Page</button>
-        <button onClick ={cleanMatches}> Clear</button>
+        <button onClick ={changeCurrentPage}>Change Page</button>        
         </MainButtons>
     </Main>
 

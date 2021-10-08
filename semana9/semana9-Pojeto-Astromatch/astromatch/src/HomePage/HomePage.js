@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios"
-import Matches from "../Matches/Matches";
 import { MainContainer, CardContainer, Buttons } from "../styles"
+import { AiFillHeart, AiOutlineClose } from "react-icons/ai"
 
 
 const Home = () => {
@@ -26,6 +26,7 @@ const Home = () => {
 
 
 
+
         const choosePerson = () => {
         axios
         .post ("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:marcelo-camilli-maryam/choose-person", {
@@ -33,7 +34,7 @@ const Home = () => {
             choice: true
         })
         .then ((res)=> {
-            getProfileToChoose()
+            getProfileToChoose(res)
             
         })
         .catch ((err) => {
@@ -41,7 +42,7 @@ const Home = () => {
         })
         } 
 
-
+        
 
     return (
         <MainContainer>
@@ -52,10 +53,11 @@ const Home = () => {
                 <strong> Age: {profile.age} </strong>
                 <p>{profile.bio}</p>
                 <Buttons>
-                    <button onClick={() => choosePerson (false)}>X</button>
-                    <button onClick={() => choosePerson (true)}>V</button>
+                    <button onClick={() => choosePerson (false)}> <AiOutlineClose/> </button>
+                    <button onClick={() => choosePerson (true)}> <AiFillHeart/></button>
                 </Buttons>
             </CardContainer>    
+            
         </MainContainer>
     
     );
