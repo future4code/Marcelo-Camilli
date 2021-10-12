@@ -10,7 +10,7 @@ const Home = () => {
 
     const getProfileToChoose = () => {
         axios
-            .get('https://us-central1-missao-newton.cloudfunctions.net/astroMatch/marcelo-camilli-maryam/person')
+            .get('https://us-central1-missao-newton.cloudfunctions.net/astroMatch/marcelo-maryam/person')
             .then((res) => {
                 setProfile(res.data.profile)
             })
@@ -29,7 +29,7 @@ const Home = () => {
 
         const choosePerson = () => {
         axios
-        .post ("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:marcelo-camilli-maryam/choose-person", {
+        .post ("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:marcelo-maryam/choose-person", {
             id: profile.id,
             choice: true
         })

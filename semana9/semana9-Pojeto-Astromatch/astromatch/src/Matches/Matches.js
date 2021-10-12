@@ -10,7 +10,7 @@ export const Match = (props) => {
 
     const getMatches = () => {
         axios
-            .get('https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:marcelo-camilli-maryam/matches')
+            .get('https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:marcelo-maryam/matches')
             .then((res) => {
                 console.log(res.data.matches)
                 setMatches(res.data.matches)
@@ -25,7 +25,7 @@ export const Match = (props) => {
 
     const cleanMatches = () => {
         axios
-            .put("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/marcelo-camilli-maryam/clear")
+            .put("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/marcelo-maryam/clear")
             .then((res) => {
                 console.log(res)
                 setMatches([])
