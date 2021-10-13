@@ -4,7 +4,7 @@
 export default function ApplicationFormPage() {
     return (
         <div>
-            App
+            Application form
         </div>
     );
 }

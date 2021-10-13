@@ -1,12 +1,15 @@
+import Header from "./Header";
 
 
 
 
 export default function AdminHomePage() {
     return (
+        <><Header />
         <div>
-            App
+            Admin Home Page
         </div>
+        </>
     );
 }
 

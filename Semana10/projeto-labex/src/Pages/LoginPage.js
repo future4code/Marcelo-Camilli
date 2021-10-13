@@ -4,7 +4,7 @@
 export default function LoginPage() {
     return (
         <div>
-            App
+            Login Page
         </div>
     );
 }
