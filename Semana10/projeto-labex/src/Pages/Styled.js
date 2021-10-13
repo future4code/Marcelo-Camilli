@@ -32,4 +32,37 @@ export const HeaderButtons = styled.div `
     }
 
 `
- 
+
+// HOMEPAGE //
+
+export const HomePageButtons = styled.div ` 
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0, auto;
+height: 100%;
+width: 100%;
+position: absolute;
+
+
+
+button {
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(187, 208, 187);
+    border:0;
+    border-radius: 5px;
+    width: 250px;
+    height: 50px;    
+    font-size: larger;
+}
+`
+
+export const MainTitle = styled.div ` 
+display: flex;
+justify-content: center;
+position: relative;
+top: 20vh;
+font-size: 36px;
+color: rgb(187, 208, 187);
+` 
