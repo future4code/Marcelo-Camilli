@@ -1,10 +1,11 @@
-
+import Header from "./Header";
 
 
 export default function ApplicationFormPage() {
     return (
-        <div>
+        <><Header /><div>
             Application form
         </div>
+        </>
     );
 }

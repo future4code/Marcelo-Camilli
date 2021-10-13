@@ -8,14 +8,14 @@ export default function HomePage() {
         history.push ("./listTrips")
     }
 
-    const goToAdminHomePage = () => {
-        history.push ("./AdminHomePage")
+    const goToLoginPage = () => {
+        history.push ("./LoginPage")
     }
 
         return (
             <div>
                 <button onClick ={goToListTripsPage}>List of Trips</button>
-                <button onClick={goToAdminHomePage}>Admin Homepage</button>
+                <button onClick={goToLoginPage}>Admin Login</button>
             </div>
         );
     }
