@@ -55,7 +55,8 @@ export default function LoginPage() {
                 value={password}
                 onChange = {onChangePassword}
             />
-            <button onClick={submitLogin, goToAdminHomePage}>Login</button>
+            <button onClick={submitLogin}>Login</button>
+            <button onClick={goToAdminHomePage}> Admin Page</button>
         </ApplyForm>
         </>
     );
