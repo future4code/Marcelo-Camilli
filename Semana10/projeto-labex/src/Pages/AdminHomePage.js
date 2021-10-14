@@ -1,5 +1,7 @@
 import Header from "./Header";
 import { useHistory } from "react-router";
+import { HomePageButtons, MainTitle } from "./Styled";
+
 
 
 
@@ -13,16 +15,15 @@ export default function AdminHomePage() {
         history.push ("./CreateTripPage")
     }
     return (
-        <><Header />
-        <div>
+        <>
+        <Header/>
+        <MainTitle>
             Admin Home Page
-        </div>
-        <div>
+        </MainTitle>
+        <HomePageButtons>
             <button onClick={goToTripDetails}>Trip Details</button>
-        </div>
-        <div>
             <button onClick={goToCreateTripPage}>Create New Trip</button>
-        </div>
+        </HomePageButtons>
         </>
     );
 }

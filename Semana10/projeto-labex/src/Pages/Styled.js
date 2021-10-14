@@ -27,6 +27,7 @@ export const HeaderButtons = styled.div `
         border: none;  
     :hover { 
         text-decoration: underline;
+        cursor: pointer;
     }    
 
     }
@@ -55,6 +56,10 @@ button {
     width: 250px;
     height: 50px;    
     font-size: larger;
+    :hover { 
+        text-decoration: underline;
+        cursor: pointer;
+    } 
 }
 `
 
@@ -75,9 +80,12 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 border: 1px solid black;
-margin-right: 40vh;
-margin-left: 40vh;
+width: 450px;
+position: relative;
+left: 70vh;
 padding: 10px;
+
+
 
 button {
     padding: 10px;
@@ -88,6 +96,10 @@ button {
     width: 200px;
     height: 40px;    
     font-size: larger;
+    :hover { 
+        text-decoration: underline;
+        cursor: pointer;
+    } 
 }
 `
 
@@ -98,4 +110,59 @@ font-size: 36px;
 display: flex;
 margin-top: 50px;
 margin-bottom: 25px;
+`
+
+
+// --- ApplicationFormPage --//
+
+export const ApplyForm = styled.div `  
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 20vh;
+button {
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(187, 208, 187);
+    border:0;
+    border-radius: 5px;
+    width: 200px;
+    height: 40px;    
+    font-size: larger;
+    :hover { 
+        text-decoration: underline;
+        cursor: pointer;
+    } 
+}
+`
+
+// -- CreateTripPage --// 
+
+export const CreateForm = styled.div `  
+display: flex;
+flex-direction: column;
+width: 400px;
+position: relative;
+justify-content: center;
+position: relative;
+left: 50vh;
+top: 20vh;
+
+
+
+button {
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(187, 208, 187);
+    border:0;
+    border-radius: 5px;
+    width: 200px;
+    height: 40px;    
+    font-size: larger;
+    align-self: center;
+    :hover { 
+        text-decoration: underline;
+        cursor: pointer;
+    } 
+}
 `
