@@ -1,41 +1,33 @@
 import Header from "./Header";
-import { useHistory } from "react-router";
 import { useState} from "react";
 import axios from "axios";
 import { ApplyForm } from "./Styled";
 
 
 export default function LoginPage() {
-    const history = useHistory ()
-    const [email, setEmail] = useState ("")
-    const [password, setPassword] = useState ("")
 
-    const goToAdminHomePage = () => {
-        history.push("./AdminHomePage")
+    const [form, setForm] = useState({email:"", password:""})
+
+
+    const onChange = (event) => {
+        setForm ({...form, [event.target.name]: event.target.value})
     }
 
-    const onChangeEmail = (event) => {
-        setEmail(event.target.value)
-    }
 
-    const onChangePassword= (event) => {
-        setPassword(event.target.value)
-    }
 
-    const submitLogin = () => {
-        console.log(email, password)
-        const body = {
-            email: email,
-            password: password
-        }
+    const submitLogin = (event) => {
+        event.preventDefault()
+        
         axios
-        .post ("https://us-central1-labenu-apis.cloudfunctions.net/labeX/marcelo-camilli-maryam/login", body)
+        .post ("https://us-central1-labenu-apis.cloudfunctions.net/labeX/marcelo-camilli-maryam/login", form)
         .then ((res)=> {
             console.log(res.data.token)
             localStorage.setItem('token',res.data.token)
+            alert ("logged in")
         })
         .catch ((err) => {
             console.log(err.res)
+            alert ("Error, try again")
         })
     }
 
@@ -43,21 +35,29 @@ export default function LoginPage() {
         <>
         <Header />
         <ApplyForm>
+            <form onSubmit={submitLogin}>
             <input 
+                name="email"
                 placeholder="email"
                 type="email"
-                value={email}
-                onChange = {onChangeEmail}
+                value={form.email}
+                onChange = {onChange}
+                required
             />
+            <br/>
             <input 
+                name= "password"
                 placeholder="password"
                 type="password"
-                value={password}
-                onChange = {onChangePassword}
+                value={form.password}
+                onChange = {onChange}
+                required
             />
-            <button onClick={submitLogin}>Login</button>
-            <button onClick={goToAdminHomePage}> Admin Page</button>
+            <br/>
+            <button>Login</button>
+            </form>                        
         </ApplyForm>
+
         </>
     );
 }

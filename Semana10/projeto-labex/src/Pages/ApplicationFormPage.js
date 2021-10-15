@@ -9,16 +9,14 @@ import { useState, useEffect } from "react";
 
 export default function ApplicationFormPage() {
     const [trips, setTrips] = useState ([])
+    const [form, setForm] = useState({name: "", age: "", applicationText: "", profession: "", country:""})
 
-    const applyToTrip = () => {
+    const applyToTrip = (event) => {
+    event.preventDefault()
+
         axios
-        .post ("https://us-central1-labenu-apis.cloudfunctions.net/labeX/marcelo-camilli-maryam/trips/:id/apply",{
-            name: "",
-            age: "",
-            applicationText: "",
-            profession: "",
-            country:"",
-        })
+        .post ("https://us-central1-labenu-apis.cloudfunctions.net/labeX/marcelo-camilli-maryam/trips/:id/apply",form
+        )
     
     .then ((res) => {
         console.log (res.data)
@@ -32,7 +30,7 @@ const getTrips = () => {
     axios
         .get("https://us-central1-labenu-apis.cloudfunctions.net/labeX/marcelo-camilli-maryam/trips")
         .then((res) => {
-            console.log(res.data)
+            console.log(res.data.trips)
             setTrips (res.data.trips)
             
         })
@@ -45,54 +43,78 @@ useEffect(() => {
     getTrips()
 }, [])
 
-
-const tripList = trips.map((trip) => {
+const tripList = trips.map ((trip) => {
     return (
-        <div key={trip.id}>
-            <p> <strong> Nome: </strong> {trip.name}</p>
-            <br />
+        <div>
+        {trip.name}
         </div>
     )
 })
 
+
+const onChange = (event) => {
+    setForm ({...form, [event.target.name]: event.target.value})
+}
+
+
     return (
 
         <><Header />
+        
         <ApplyForm>
-            <select>
-                <option>{tripList}</option>
-                
-            </select>
-            <input 
- /*            value={applicationName}
-            onChange = {handleNameChange} */
-            placeholder="Nome"
-            type = "text"                     
+            <h2> Application Form </h2>
+            <form onSubmit={applyToTrip}>
+            <input
+            name="name"
+            value={form.name}
+            onChange={onChange}
+            placeholder="Name"
+            required
+            type="text"            
             />
-            <input 
-/*             value={applicationAge}
-            onChange = {handleAgeChange} */
-            placeholder="Age"
-            type = "number"   
-            min = "18"                  
-            />      
-            <input 
-/*             value = {applicationReason}
-            onChange = {handleReasonChange} */
-            placeholder= "Reason"
-            type = "text"
+            <br/>
+            <input
+            name="age"
+            value={form.age}
+            onChange={onChange}
+            placeholder="age"
+            required
+            type="number"  
+            min="18"                  
             />
-            <input 
-/*             value = {applicationProfession}
-            onChange = {handleProfessionChange} */
-            placeholder="Profession"
-            type = "text"            
+            <br/>
+            <input
+            name="applicationText"
+            value={form.applicationText}
+            onChange={onChange}
+            placeholder="Reason"
+            required
+            type="text"            
             />
-            <select>
-                <option>País</option>
-            </select>
-            <button onClick = {applyToTrip}>Send</button>
+            <br/>
+            <input
+            name="profession"
+            value={form.profession}
+            onChange={onChange}
+            placeholder="profession"
+            required
+            type="text"            
+            />
+            <br/>
+            <input
+            name="country"
+            value={form.country}
+            onChange={onChange}
+            placeholder="country"
+            required
+            type="text"            
+            />
+            <br/>
+            <button> Apply</button>
+
+            </form>
         </ApplyForm>
+        
         </>
     );
 }

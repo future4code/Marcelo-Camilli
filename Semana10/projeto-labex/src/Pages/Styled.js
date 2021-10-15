@@ -119,7 +119,15 @@ export const ApplyForm = styled.div `
 display: flex;
 flex-direction: column;
 align-items: center;
+justify-content: center;
 margin-top: 20vh;
+input {
+    width: 250px;
+    height: 35px;
+    margin: 2px;
+    border-radius: 5px;
+
+}
 button {
     padding: 10px;
     margin: 10px;
