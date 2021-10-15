@@ -174,3 +174,34 @@ button {
     } 
 }
 `
+
+// --- Adim HomePage -- // 
+export const AdminTitle = styled.div ` 
+display: flex;
+justify-content: center;
+position: absolute;
+flex-direction: column;
+top: 10vh;
+left: 70vh;
+font-size: 36px;
+color: black;
+
+button {
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(187, 208, 187);
+    border:0;
+    border-radius: 5px;
+    width: 200px;
+    height: 40px;        
+    align-self: center;
+    :hover { 
+        text-decoration: underline;
+        cursor: pointer;
+    } 
+
+}
+` 
+export const AdmTripContainer = styled.div ` 
+margin-top: 20vh;
+`

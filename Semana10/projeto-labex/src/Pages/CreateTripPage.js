@@ -6,6 +6,8 @@ import axios from "axios"
 export default function CreateTripPage() {
     const [form, setForm] = useState({name:"", planet:"", description:"", date: "", durationInDays:""})
 
+    
+
     const onChange = (event) => {
         setForm ({...form, [event.target.name]: event.target.value})
         

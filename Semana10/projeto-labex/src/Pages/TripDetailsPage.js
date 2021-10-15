@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react"
 import Header from "./Header";
 
+
 export default function TripDetailsPage() {
     const [detailedTrips, setDetailedTrips] = useState([])
 
@@ -16,8 +17,7 @@ export default function TripDetailsPage() {
         .then ((res) => {
             console.log(res.data.trip)
             setDetailedTrips(res.data.trip.candidates)
-            //setDetailedTripsId (res.data.trip)
-            //set aprovados
+  
         })
         .catch((err) => {
             console.log (err)
@@ -37,7 +37,7 @@ export default function TripDetailsPage() {
             </div>
         )
     })
-//mapear aprovados e id de viagem.
+
 
     return (
         <>
