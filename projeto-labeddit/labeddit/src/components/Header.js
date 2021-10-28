@@ -1,41 +1,20 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
-import ToolBar from '@material-ui/core/Toolbar'
-import Typography from '@material-ui/core/Typography'
+import { StyledToolBar } from './styled'
 import Button from '@material-ui/core/Button'
-import IconButton from '@material-ui/core/IconButton'
-import MenuIcon from "@material-ui/core/Menu"
-
-const useStyles = makeStyles ((theme) => ({
-    root: {
-        flexGrow: 1,
-    },
-    menuButton: {
-        marginRight: theme.spacing(2),
-    },
-    title: {
-        flexGrow: 1,
-    }    
-}))
+import { goToFeed, goToLogin } from '../Router/cordinator'
+import {useHistory} from "react-router-dom"
 
     const Header = () => { 
-        const classes = useStyles()
-
+        const history = useHistory ()
         return (
-            <div className={classes.root}>
                 <AppBar position = "static">
-                    <ToolBar>
-                    <IconButton edge="start" className={classes.menuButton} color="inherit" arial-label="">
-                    <MenuIcon />
-                    </IconButton>
-                    <Typography variant="h6" className={classes.title}>
-                        News
-                    </Typography>
-                    <Button color ="inherit"> Login </Button>
-                    </ToolBar>
+                    <StyledToolBar>
+                    <Button onClick={() => goToFeed (history)} color ="inherit"> Labeddit</Button>
+                    <Button onClick={() => goToLogin (history)} color ="inherit"> Login </Button>
+                    </StyledToolBar>
                 </AppBar>
-            </div>
+            
         )
     }
 

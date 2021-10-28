@@ -1,11 +1,16 @@
 import React from "react"
-import { ScreenContainer, LogoImage, InputsContainer, SignUpButtonContainer } from "./styled"
+import { ScreenContainer, LogoImage, SignUpButtonContainer } from "./styled"
 import logo from "../../assets/logo.png"
-import { Button, TextField } from "@material-ui/core"
+import { Button} from "@material-ui/core"
 import LoginForm from "./LoginForm"
+/* import { goToSignup } from "../../Router/cordinator" */
+
+
+
 
 
 const  LoginPage = () => {
+    
     return (
     <ScreenContainer>
       <LogoImage src={logo}/>
@@ -16,7 +21,7 @@ const  LoginPage = () => {
             fullWidth
             variant={"text"}
             color={"primary"}
-            /* onClick={() => goToSignup(history)} */
+            /* onClick={() => goToSignup()} */
             >
         Não possui conta? Cadastre-se
         </Button>
