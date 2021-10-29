@@ -2,24 +2,35 @@ import React from "react"
 import { InputsContainer,  } from "./styled"
 import { Button, TextField } from "@material-ui/core"
 import useForm from "../../hooks/useForm"
-import { login } from "../../services/users"
+/* import { signUp } from "../../services/users" */
 import {useHistory} from "react-router-dom"
 
 
 
-const  LoginForm = ({rightButtonText, setRightButtonText}) => {
-    const [form, onChange, clear] = useForm({email:"", password:""})
+const  SignUpForm = () => {
+    const [form, onChange, clear] = useForm({name: "", email:"", password:""})
     const history = useHistory ()
 
-    const onSubmitForm = (event) => {
-      login (form, clear, history, setRightButtonText)
+/*     const onSubmitForm = (event) => {
+      signUp (form, clear, history)
       event.preventDefault()
-    }
+    } */
 
 
   return (
       <InputsContainer>
-        <form onSubmit={onSubmitForm}>
+        <form /* onSubmit={onSubmitForm} */>
+        <TextField
+            name={"name"}
+            value={form.name}
+            onChange={onChange}
+            label={"Name"}
+            variant={"outlined"}
+            fullWidth
+            margin={"normal"}
+            required
+            type={"name"}
+          />
           <TextField
             name={"email"}
             value={form.email}
@@ -54,4 +65,4 @@ const  LoginForm = ({rightButtonText, setRightButtonText}) => {
       </InputsContainer>
   )
 }
-export default LoginForm
+export default SignUpForm
